@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Register = () => {
-  const [userName, setUserName] = useState('');
-  const [password, setPassword] = useState('');
-  const [user, setUser] = useState({ id: 1, username: 'Daniel Smith' }); // Initialize with a dummy user
+  const [newUserName, setNewUserName] = useState('');
+  const [newPassword, setNewPassword] = useState('');
+  //   const [user, setUser] = useState({ id: 1, username: 'Daniel Smith' });
+  const navigate = useNavigate(); // Initialize navigate
 
   async function handleRegister(e) {
     e.preventDefault();
@@ -11,9 +13,12 @@ const Register = () => {
   }
 
   function handleLogout() {
-    // Clear the user information when clicking "Logout"
     setUser({});
   }
+
+  const handleClickHome = () => {
+    navigate(`/`);
+  };
 
   return (
     <>
@@ -21,16 +26,16 @@ const Register = () => {
         <form onSubmit={handleRegister}>
           <h1>Register</h1>
           <input
-            onChange={(e) => setUserName(e.target.value)}
-            value={userName}
+            onChange={(e) => setNewUserName(e.target.value)}
+            value={newUserName}
             placeholder="Username"
           ></input>
           <input
-            onChange={(e) => setPassword(e.target.value)}
-            value={password}
+            onChange={(e) => setNewPassword(e.target.value)}
+            value={newPassword}
             placeholder="Password"
           ></input>
-          <button>Register</button>
+          <button onClick={handleClickHome}>Register</button>
         </form>
       </div>
     </>
