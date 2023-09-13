@@ -1,0 +1,58 @@
+h1 {
+  text-align: center;
+}
+
+.form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 200px;
+  padding: 20px;
+  margin-top: 20px;
+  align-items: center;
+  box-shadow: #0000003d 0 3px 8px;
+}
+.navbar-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+img {
+  box-shadow: #0000003d 0 3px 8px;
+  padding: 10px;
+  width: 100px;
+}
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+#paintings-container {
+  margin-top: 20px;
+}
+
+#painting-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+#paintings {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+}
+table {
+  margin: 20px;
+  background-color: gray;
+  padding: 20px;
+  color: #fff;
+}
