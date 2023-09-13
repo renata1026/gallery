@@ -1,9 +1,10 @@
 import React from 'react';
 import { useOutletContext, useParams } from 'react-router-dom';
 import Table from '../components/Table';
+import { useRouteLoaderData } from 'react-router-dom';
 
 const Painting = () => {
-  const { photoRecordList } = useOutletContext();
+  const photoRecordList = useRouteLoaderData('App');
   // Pass photoRecordList as a prop
   const { paintingId } = useParams(); // This is the ID from the URL parame
 

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useOutletContext, useNavigate } from 'react-router-dom'; // Import useNavigate from react-router-dom
-import Paintings from './Paintings';
 
 const Login = () => {
   const [username, setUsername] = useState('');

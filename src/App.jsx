@@ -9,16 +9,16 @@ function App() {
   const [photoRecordList, setPhotoRecordList] = useState([]);
   const [user, setUser] = useState({ id: 1, username: 'Daniel Smith' });
 
-  const fetchPaintings = async () => {
-    const response = await fetch(API);
-    const photoData = await response.json();
-    console.log(photoData.records);
-    setPhotoRecordList(photoData.records);
-  };
+  //   const fetchPaintings = async () => {
+  //     const response = await fetch(API);
+  //     const photoData = await response.json();
+  //     console.log(photoData.records);
+  //     setPhotoRecordList(photoData.records);
+  //   };
 
-  useEffect(() => {
-    fetchPaintings();
-  }, []);
+  //   useEffect(() => {
+  //     fetchPaintings();
+  //   }, []);
 
   return (
     <>
