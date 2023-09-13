@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 const Register = () => {
   const [userName, setUserName] = useState('');
@@ -7,6 +7,7 @@ const Register = () => {
 
   async function handleRegister(e) {
     e.preventDefault();
+    // Implement your registration logic here
   }
 
   function handleLogout() {
@@ -14,29 +15,23 @@ const Register = () => {
     setUser({});
   }
 
-  console.log(userName, password);
-
   return (
     <>
       <div className="form-container">
-        {user.id ? (
-          <>{/* <button onClick={handleLogout}>Logout</button> */}</>
-        ) : (
-          <form onSubmit={handleRegister}>
-            <h1>Register</h1>
-            <input
-              onChange={(e) => setUserName(e.target.value)}
-              value={userName}
-              placeholder="Username"
-            ></input>
-            <input
-              onChange={(e) => setPassword(e.target.value)}
-              value={password}
-              placeholder="Password"
-            ></input>
-            <button>Register</button>
-          </form>
-        )}
+        <form onSubmit={handleRegister}>
+          <h1>Register</h1>
+          <input
+            onChange={(e) => setUserName(e.target.value)}
+            value={userName}
+            placeholder="Username"
+          ></input>
+          <input
+            onChange={(e) => setPassword(e.target.value)}
+            value={password}
+            placeholder="Password"
+          ></input>
+          <button>Register</button>
+        </form>
       </div>
     </>
   );
