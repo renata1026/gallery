@@ -1,12 +1,13 @@
 import { Outlet } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import { useState, useEffect } from 'react';
-import { API } from './API/api';
+import { API } from './constants/api';
 
-import Paintings from './components/Paintings';
+import Paintings from './routes/Paintings';
 
 function App() {
   const [photoRecordList, setPhotoRecordList] = useState([]);
+  const [user, setUser] = useState({ id: 1, username: 'Daniel Smith' });
 
   const fetchPaintings = async () => {
     const response = await fetch(API);
@@ -22,9 +23,9 @@ function App() {
   return (
     <>
       <div>
-        <Navbar />
+        <Navbar user={user} setUser={setUser} />
         {/* //where the child routes will be rendered */}
-        <Outlet context={{ photoRecordList }} />
+        <Outlet context={{ photoRecordList, user, setUser }} />
       </div>
     </>
   );

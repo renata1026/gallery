@@ -1,6 +1,6 @@
 import React from 'react';
 import { useOutletContext, useParams } from 'react-router-dom';
-import Table from './Table';
+import Table from '../components/Table';
 
 const Painting = () => {
   const { photoRecordList } = useOutletContext();

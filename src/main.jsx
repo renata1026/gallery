@@ -3,10 +3,10 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import './index.css';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import Login from './components/Login';
-import Register from './components/Register';
-import Paintings from './components/Paintings';
-import Painting from './components/Painting';
+import Login from './routes/Login';
+import Register from './routes/Register';
+import Paintings from './routes/Paintings';
+import Painting from './routes/Painting';
 
 const router = createBrowserRouter([
   {
